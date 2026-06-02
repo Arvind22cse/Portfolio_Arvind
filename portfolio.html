@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arvind M | Full Stack Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+ <link rel="stylesheet" href="Style.css">
+
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="grid-bg"></div>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <a href="#home" class="logo">Arvind<span>.dev</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home" class="active">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#internship">Internship</a></li>
+    <li><a href="#achievements">Achievements</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <span class="close-menu" id="closeMenu"><i class="fas fa-times"></i></span>
+  <a href="#home" onclick="closeMobileMenu()">Home</a>
+  <a href="#about" onclick="closeMobileMenu()">About</a>
+  <a href="#skills" onclick="closeMobileMenu()">Skills</a>
+  <a href="#projects" onclick="closeMobileMenu()">Projects</a>
+  <a href="#achievements" onclick="closeMobileMenu()">Achievements</a>
+  <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge"><span class="dot"></span> Open to Opportunities • 2026 Graduate</div>
+      <h1 class="hero-name">
+        Hi, I'm
+        <span class="line2">Arvind M</span>
+      </h1>
+      <div class="hero-typing-wrap">
+        <span class="hero-typing">I build <span class="typed" id="typed"></span><span class="cursor-blink">|</span></span>
+      </div>
+      <p class="hero-desc">
+        Aspiring Full Stack Developer passionate about building scalable web and mobile applications using MERN Stack, Spring Boot, Flutter and modern software engineering practices.
+      </p>
+      <div class="hero-cta">
+        <a href="https://drive.google.com/file/d/1f-DEdznvuj7_rn6rdJGtMAapeaDi_gYV/view?usp=sharing" class="btn btn-primary"><i class="fas fa-download"></i> Download Resume</a>
+        <a href="#projects" class="btn btn-outline"><i class="fas fa-code"></i> View Projects</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card">
+       
+          <img src="profile.jpeg" alt="Arvind M" style="width:40%;height:40%;object-fit:cover;border-radius:16px;">
+        
+        <div class="hc-name">Arvind M</div>
+        <div class="hc-role">Full Stack Developer</div>
+        <div class="hc-tags">
+          <span class="hc-tag">MERN Stack</span>
+          <span class="hc-tag">Spring Boot</span>
+          <span class="hc-tag">Flutter</span>
+          <span class="hc-tag">Figma</span>
+        </div>
+        <div class="hc-stat-row">
+          <div class="hc-stat"><div class="num">11+</div><div class="lbl">Projects</div></div>
+          <div class="hc-stat"><div class="num">12+</div><div class="lbl">Tech Stack</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- STATS -->
+<section id="stats">
+  <div class="stats-bar stagger reveal">
+    <div class="stat-item">
+      <span class="stat-num">11+</span>
+      <span class="stat-label">Projects Built</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">12+</span>
+      <span class="stat-label">Technologies</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">1</span>
+      <span class="stat-label">IEEE Publication</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">2026</span>
+      <span class="stat-label">Graduate Year</span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-title-wrap reveal">
+    <div class="section-label">About</div>
+    <h2 class="section-title">Who I <span>Am</span></h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="about-grid">
+    <div class="about-left reveal-left">
+      <div class="about-edu-label">Education</div>
+      <div class="about-edu-name">B.E Computer Science & Engineering</div>
+      <div class="about-edu-sub">Kongu Engineering College, Tamil Nadu</div>
+      <div class="about-divider"></div>
+      <p class="about-text">
+        I'm a passionate Full Stack Developer with hands-on experience in <strong>React, Node.js, Express.js, Spring Boot, MongoDB and MySQL</strong>. I enjoy building real-world applications that solve meaningful problems.<br><br>
+        From developing hospital management systems with face recognition to publishing IEEE research on cyberbullying detection, I constantly push myself to apply technology meaningfully. I'm a <strong>2026 graduate</strong> actively seeking opportunities to grow and contribute.
+      </p>
+    </div>
+    <div class="about-right reveal-right">
+      <ul class="interest-list stagger">
+        <li class="interest-item">
+          <div class="interest-icon"><i class="fas fa-layer-group"></i></div>
+          <div class="interest-text">
+            <strong>Full Stack Development</strong>
+            <span>End-to-end web applications with MERN & Spring Boot</span>
+          </div>
+        </li>
+        <li class="interest-item">
+          <div class="interest-icon"><i class="fas fa-mobile-alt"></i></div>
+          <div class="interest-text">
+            <strong>Mobile Development</strong>
+            <span>Cross-platform apps with Flutter</span>
+          </div>
+        </li>
+        <li class="interest-item">
+          <div class="interest-icon"><i class="fas fa-brain"></i></div>
+          <div class="interest-text">
+            <strong>Machine Learning</strong>
+            <span>NLP, deep learning & predictive modeling</span>
+          </div>
+        </li>
+        <li class="interest-item">
+          <div class="interest-icon"><i class="fas fa-pen-nib"></i></div>
+          <div class="interest-text">
+            <strong>UI/UX Design</strong>
+            <span>User-centered design with Figma</span>
+          </div>
+        </li>
+        <li class="interest-item">
+          <div class="interest-icon"><i class="fas fa-file-alt"></i></div>
+          <div class="interest-text">
+            <strong>Research & Publication</strong>
+            <span>IEEE Xplore published author</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-title-wrap reveal">
+    <div class="section-label">Skills</div>
+    <h2 class="section-title">Tech <span>Stack</span></h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="skills-container">
+    <div class="reveal">
+      <div class="skill-category-title">Languages</div>
+      <div class="skills-grid stagger">
+        <div class="skill-pill"><span class="skill-icon">☕</span> Java</div>
+        <div class="skill-pill"><span class="skill-icon">⚙️</span> C</div>
+        <div class="skill-pill"><span class="skill-icon">🟨</span> JavaScript</div>
+        <div class="skill-pill"><span class="skill-icon">🐍</span> Python</div>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="skill-category-title">Frontend & Mobile</div>
+      <div class="skills-grid stagger">
+        <div class="skill-pill"><span class="skill-icon">⚛️</span> React.js</div>
+        <div class="skill-pill"><span class="skill-icon">💙</span> Flutter</div>
+        <div class="skill-pill"><span class="skill-icon">🎨</span> HTML / CSS</div>
+        <div class="skill-pill"><span class="skill-icon">🖼️</span> Figma</div>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="skill-category-title">Backend & Databases</div>
+      <div class="skills-grid stagger">
+        <div class="skill-pill"><span class="skill-icon">🟢</span> Node.js</div>
+        <div class="skill-pill"><span class="skill-icon">🚂</span> Express.js</div>
+        <div class="skill-pill"><span class="skill-icon">🍃</span> Spring Boot</div>
+        <div class="skill-pill"><span class="skill-icon">🍃</span> MongoDB</div>
+        <div class="skill-pill"><span class="skill-icon">🐬</span> MySQL</div>
+        <div class="skill-pill"><span class="skill-icon">🐍</span> Flask</div>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="skill-category-title">Tools & Others</div>
+      <div class="skills-grid stagger">
+        <div class="skill-pill"><span class="skill-icon">🐙</span> Git</div>
+        <div class="skill-pill"><span class="skill-icon">📮</span> Postman</div>
+        <div class="skill-pill"><span class="skill-icon">🤖</span> OpenCV</div>
+        <div class="skill-pill"><span class="skill-icon">🧠</span> DistilBERT / RoBERTa</div>
+        <div class="skill-pill"><span class="skill-icon">📊</span> XGBoost</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-title-wrap reveal">
+    <div class="section-label">Portfolio</div>
+    <h2 class="section-title">My <span>Projects</span></h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="project-tabs reveal">
+    <button class="tab-btn active" onclick="switchTab('all', this)">All Projects</button>
+    <button class="tab-btn" onclick="switchTab('fullstack', this)">Full Stack</button>
+    <button class="tab-btn" onclick="switchTab('research', this)">Research</button>
+    <button class="tab-btn" onclick="switchTab('games', this)">Games & Design</button>
+  </div>
+
+  <!-- ALL -->
+  <div class="project-group active" id="tab-all">
+
+    <!-- Research -->
+    <div class="project-section-label reveal"><i class="fas fa-flask"></i> Research Publication</div>
+    <div class="reveal">
+      <div class="research-card">
+        <div class="research-badge"><i class="fas fa-award"></i> IEEE Xplore Published</div>
+        <div class="research-title">Contextual Cyberbullying Detection Using Emotion Enhanced Bystander Modeling</div>
+        <p class="research-desc">Published an IEEE research paper proposing a deep learning framework for detecting cyberbullying on social networking platforms. Incorporated contextual information, emotional signals, and bystander behavior to improve identification of subtle and harmful online interactions. The proposed DistilBERT + BiLSTM model outperformed all baselines.</p>
+        <div class="research-metrics">
+          <div class="metric"><span class="metric-val">97.1%</span><span class="metric-lbl">Accuracy</span></div>
+          <div class="metric"><span class="metric-val">97.3%</span><span class="metric-lbl">F1-Score</span></div>
+          <div class="metric"><span class="metric-val">IEEE</span><span class="metric-lbl">Publication</span></div>
+        </div>
+        <div class="tech-stack" style="margin-bottom:24px">
+          <span class="tech-tag">Python</span><span class="tech-tag">NLP</span><span class="tech-tag">DistilBERT</span><span class="tech-tag">RoBERTa</span><span class="tech-tag">LSTM</span><span class="tech-tag">BiLSTM</span><span class="tech-tag">Deep Learning</span>
+        </div>
+        <a href="https://ieeexplore.ieee.org/document/11436665" target="_blank" class="research-link"><i class="fas fa-external-link-alt"></i> View on IEEE Xplore</a>
+      </div>
+    </div>
+
+    <!-- Full Stack -->
+    <div class="project-section-label reveal" style="margin-top:50px"><i class="fas fa-code"></i> Full Stack Projects</div>
+    <div class="project-grid stagger reveal">
+      <div class="project-card">
+        <div class="project-card-head"><h3>Hospital Management System</h3><div class="project-links"><a href="https://github.com/Arvind22cse/Hospital_management.git"><i class="fab fa-github"></i></a></div></div>
+        <p class="project-desc">Smart hospital management solution that streamlines doctor attendance via face recognition. Features secure authentication, real-time attendance tracking, doctor availability monitoring, and centralized record management.</p>
+        <div class="tech-stack"><span class="tech-tag">MERN</span><span class="tech-tag">Flutter</span><span class="tech-tag">OpenCV</span></div>
+      </div>
+      <div class="project-card">
+        <div class="project-card-head"><h3>Textile Management System</h3><div class="project-links"><a href="https://github.com/Arvind22cse/textile-MERN.git"><i class="fab fa-github"></i></a></div></div>
+        <p class="project-desc">Digital business management platform for textile retailers with inventory control, order processing, secure online payments, automated SMS notifications, and advanced product filtering.</p>
+        <div class="tech-stack"><span class="tech-tag">MERN</span><span class="tech-tag">Razorpay</span><span class="tech-tag">Twilio</span></div>
+      </div>
+      <div class="project-card">
+        <div class="project-card-head"><h3>Expense Tracker</h3><div class="project-links"><a href="https://github.com/Arvind22cse/Expense_Tracker_Application.git"><i class="fab fa-github"></i></a></div></div>
+        <p class="project-desc">Full-stack financial management application with transaction categorization, expense analytics, interactive dashboards, and secure JWT authentication to provide meaningful financial insights.</p>
+        <div class="tech-stack"><span class="tech-tag">Spring Boot</span><span class="tech-tag">React</span><span class="tech-tag">MySQL</span></div>
+      </div>
+      <div class="project-card">
+        <div class="project-card-head"><h3>Hostel Utility Service</h3><div class="project-links"><a href="https://github.com/Arvind22cse/HOSTAL_UTILITY_SERVICE.git"><i class="fab fa-github"></i></a></div></div>
+        <p class="project-desc">Centralized service management platform for hostel residents to report and track maintenance requests, with automated complaint handling, status updates, and email notifications.</p>
+        <div class="tech-stack"><span class="tech-tag">MERN</span><span class="tech-tag">Nodemailer</span></div>
+      </div>
+      <div class="project-card">
+        <div class="project-card-head"><h3>Work Force Management System</h3><div class="project-links"><a href="https://github.com/Arvind22cse/Workforce-Management.git"><i class="fab fa-github"></i></a></div></div>
+        <p class="project-desc">Platform connecting users with skilled professionals — plumbers, electricians, carpenters, technicians. Enables searching, booking, and managing service requests, especially useful for those new to a city.</p>
+        <div class="tech-stack"><span class="tech-tag">HTML/CSS/JS</span><span class="tech-tag">Express.js</span><span class="tech-tag">MongoDB</span></div>
+      </div>
+      <div class="project-card">
+        <div class="project-card-head"><h3>Food Recipe Application</h3><div class="project-links"><a href="https://github.com/Arvind22cse/food-receipe-project.git"><i class="fab fa-github"></i></a></div></div>
+        <p class="project-desc">Responsive recipe discovery platform integrating external meal APIs. Users can search meals by name, browse cooking instructions, ingredients, categories, and regional cuisine info.</p>
+        <div class="tech-stack"><span class="tech-tag">JavaScript</span><span class="tech-tag">REST API</span><span class="tech-tag">HTML/CSS</span></div>
+      </div>
+      <div class="project-card">
+        <div class="project-card-head"><h3>Hotel Billing System</h3><div class="project-links"><a href="https://github.com/Arvind22cse/foodordering-using-python.git"><i class="fab fa-github"></i></a></div></div>
+        <p class="project-desc">Restaurant billing system automating order processing and invoice generation, helping staff manage orders efficiently and calculate billing details accurately.</p>
+        <div class="tech-stack"><span class="tech-tag">Python</span><span class="tech-tag">Flask</span><span class="tech-tag">MongoDB</span></div>
+      </div>
+      <div class="project-card">
+        <div class="project-card-head"><h3>Product Management System</h3><div class="project-links"><a href="https://github.com/Arvind22cse/MERNSTACK.git"><i class="fab fa-github"></i></a></div></div>
+        <p class="project-desc">MERN stack CRUD application for managing product information — built as a hands-on learning project covering React, Express.js, MongoDB and REST API design.</p>
+        <div class="tech-stack"><span class="tech-tag">React</span><span class="tech-tag">Express.js</span><span class="tech-tag">MongoDB</span></div>
+      </div>
+    </div>
+
+    <!-- Games & Design -->
+    <div class="project-section-label reveal" style="margin-top:50px"><i class="fas fa-gamepad"></i> Games & UI/UX Design</div>
+    <div class="project-grid stagger reveal">
+      <div class="project-card">
+        <div class="project-card-head"><h3>Tic Tac Toe</h3><div class="project-links"><a href="https://github.com/Arvind22cse/TIC_TAC_TOE_GAME.git"><i class="fab fa-github"></i></a>
+        <!-- Live Link -->
+        <a href="https://arvind22cse.github.io/TIC_TAC_TOE_GAME/" target="_blank">
+            <i class="fas fa-external-link-alt"></i>
+        </a>
+        </div></div>
+        <p class="project-desc">Interactive Tic Tac Toe game with turn-based gameplay, winner detection, draw handling, and game reset. Strengthened JS event handling and DOM manipulation skills.</p>
+        <div class="tech-stack"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JavaScript</span></div>
+      </div>
+      <div class="project-card">
+        <div class="project-card-head"><h3>Classic Pong Game</h3><div class="project-links"><a href="https://github.com/Arvind22cse/python-game-development.git"><i class="fab fa-github"></i></a></div></div>
+        <p class="project-desc">Two-player Pong game with paddle controls, collision detection, score tracking, and sound effects. Hands-on experience in event-driven programming and real-time graphics rendering.</p>
+        <div class="tech-stack"><span class="tech-tag">Python</span><span class="tech-tag">Pygame</span></div>
+      </div>
+      <div class="project-card">
+        <div class="project-card-head">
+          <h3>Farm2Home Delivery App (UI/UX)</h3>
+          <div class="project-links"><a href="https://www.figma.com/design/Xmasc5BN2zt5DOJSYw2pQs/Untitled?node-id=0-1&t=dFc6kOFbhfUlI2hf-1" target="_blank"><i class="fa-brands fa-figma"></i></a></div>
+        </div>
+        <p class="project-desc">Complete Figma prototype for a Farm2Home grocery delivery app — user auth, product browsing, cart, checkout, address management, payment flow, and order confirmation. Applied grid systems, visual hierarchy, auto-layout, and mobile-first design principles.</p>
+        <div class="tech-stack"><span class="tech-tag">Figma</span><span class="tech-tag">UI Design</span><span class="tech-tag">Prototyping</span><span class="tech-tag">Mobile Design</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FULLSTACK TAB -->
+  <div class="project-group" id="tab-fullstack">
+    <div class="project-grid stagger">
+     <div class="project-card">
+        <div class="project-card-head"><h3>Hospital Management System</h3><div class="project-links"><a href="https://github.com/Arvind22cse/Hospital_management.git"><i class="fab fa-github"></i></a></div></div>
+        <p class="project-desc">Smart hospital management solution that streamlines doctor attendance via face recognition. Features secure authentication, real-time attendance tracking, doctor availability monitoring, and centralized record management.</p>
+        <div class="tech-stack"><span class="tech-tag">MERN</span><span class="tech-tag">Flutter</span><span class="tech-tag">OpenCV</span></div>
+      </div>
+      <div class="project-card">
+        <div class="project-card-head"><h3>Textile Management System</h3><div class="project-links"><a href="https://github.com/Arvind22cse/textile-MERN.git"><i class="fab fa-github"></i></a></div></div>
+        <p class="project-desc">Digital business management platform for textile retailers with inventory control, order processing, secure online payments, automated SMS notifications, and advanced product filtering.</p>
+        <div class="tech-stack"><span class="tech-tag">MERN</span><span class="tech-tag">Razorpay</span><span class="tech-tag">Twilio</span></div>
+      </div>
+      <div class="project-card">
+        <div class="project-card-head"><h3>Expense Tracker</h3><div class="project-links"><a href="https://github.com/Arvind22cse/Expense_Tracker_Application.git"><i class="fab fa-github"></i></a></div></div>
+        <p class="project-desc">Full-stack financial management application with transaction categorization, expense analytics, interactive dashboards, and secure JWT authentication to provide meaningful financial insights.</p>
+        <div class="tech-stack"><span class="tech-tag">Spring Boot</span><span class="tech-tag">React</span><span class="tech-tag">MySQL</span></div>
+      </div>
+      <div class="project-card">
+        <div class="project-card-head"><h3>Hostel Utility Service</h3><div class="project-links"><a href="https://github.com/Arvind22cse/HOSTAL_UTILITY_SERVICE.git"><i class="fab fa-github"></i></a></div></div>
+        <p class="project-desc">Centralized service management platform for hostel residents to report and track maintenance requests, with automated complaint handling, status updates, and email notifications.</p>
+        <div class="tech-stack"><span class="tech-tag">MERN</span><span class="tech-tag">Nodemailer</span></div>
+      </div>
+      <div class="project-card">
+        <div class="project-card-head"><h3>Work Force Management System</h3><div class="project-links"><a href="https://github.com/Arvind22cse/Workforce-Management.git"><i class="fab fa-github"></i></a></div></div>
+        <p class="project-desc">Platform connecting users with skilled professionals — plumbers, electricians, carpenters, technicians. Enables searching, booking, and managing service requests, especially useful for those new to a city.</p>
+        <div class="tech-stack"><span class="tech-tag">HTML/CSS/JS</span><span class="tech-tag">Express.js</span><span class="tech-tag">MongoDB</span></div>
+      </div>
+      <div class="project-card">
+        <div class="project-card-head"><h3>Food Recipe Application</h3><div class="project-links"><a href="https://github.com/Arvind22cse/food-receipe-project.git"><i class="fab fa-github"></i></a></div></div>
+        <p class="project-desc">Responsive recipe discovery platform integrating external meal APIs. Users can search meals by name, browse cooking instructions, ingredients, categories, and regional cuisine info.</p>
+        <div class="tech-stack"><span class="tech-tag">JavaScript</span><span class="tech-tag">REST API</span><span class="tech-tag">HTML/CSS</span></div>
+      </div>
+      <div class="project-card">
+        <div class="project-card-head"><h3>Hotel Billing System</h3><div class="project-links"><a href="https://github.com/Arvind22cse/foodordering-using-python.git"><i class="fab fa-github"></i></a></div></div>
+        <p class="project-desc">Restaurant billing system automating order processing and invoice generation, helping staff manage orders efficiently and calculate billing details accurately.</p>
+        <div class="tech-stack"><span class="tech-tag">Python</span><span class="tech-tag">Flask</span><span class="tech-tag">MongoDB</span></div>
+      </div>
+      <div class="project-card">
+        <div class="project-card-head"><h3>Product Management System</h3><div class="project-links"><a href="https://github.com/Arvind22cse/MERNSTACK.git"><i class="fab fa-github"></i></a></div></div>
+        <p class="project-desc">MERN stack CRUD application for managing product information — built as a hands-on learning project covering React, Express.js, MongoDB and REST API design.</p>
+        <div class="tech-stack"><span class="tech-tag">React</span><span class="tech-tag">Express.js</span><span class="tech-tag">MongoDB</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RESEARCH TAB -->
+  <div class="project-group" id="tab-research">
+    <div class="research-card reveal">
+      <div class="research-badge"><i class="fas fa-award"></i> IEEE Xplore Published</div>
+      <div class="research-title">Contextual Cyberbullying Detection Using Emotion Enhanced Bystander Modeling</div>
+      <p class="research-desc">Published an IEEE research paper proposing a deep learning framework for detecting cyberbullying on social networking platforms. Incorporated contextual information, emotional signals, and bystander behavior to improve identification of subtle and harmful online interactions. Implemented transformer-based models including DistilBERT and RoBERTa combined with LSTM and BiLSTM architectures for fine-grained text classification and severity detection.</p>
+      <div class="research-metrics">
+        <div class="metric"><span class="metric-val">97.1%</span><span class="metric-lbl">Accuracy</span></div>
+        <div class="metric"><span class="metric-val">97.3%</span><span class="metric-lbl">F1-Score</span></div>
+        <div class="metric"><span class="metric-val">IEEE</span><span class="metric-lbl">Publication</span></div>
+      </div>
+      <div class="tech-stack" style="margin-bottom:24px">
+        <span class="tech-tag">Python</span><span class="tech-tag">NLP</span><span class="tech-tag">DistilBERT</span><span class="tech-tag">RoBERTa</span><span class="tech-tag">LSTM</span><span class="tech-tag">BiLSTM</span><span class="tech-tag">Deep Learning</span>
+      </div>
+      <a href="https://ieeexplore.ieee.org/document/11436665" target="_blank" class="research-link"><i class="fas fa-external-link-alt"></i> View on IEEE Xplore</a>
+    </div>
+  </div>
+
+  <!-- GAMES TAB -->
+  <div class="project-group" id="tab-games">
+    <div class="project-grid stagger">
+       <div class="project-card">
+        <div class="project-card-head"><h3>Tic Tac Toe</h3><div class="project-links"><a href="https://github.com/Arvind22cse/TIC_TAC_TOE_GAME.git"><i class="fab fa-github"></i></a>
+        <!-- Live Link -->
+        <a href="https://arvind22cse.github.io/TIC_TAC_TOE_GAME/" target="_blank">
+            <i class="fas fa-external-link-alt"></i>
+        </a>
+        </div></div>
+        <p class="project-desc">Interactive Tic Tac Toe game with turn-based gameplay, winner detection, draw handling, and game reset. Strengthened JS event handling and DOM manipulation skills.</p>
+        <div class="tech-stack"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JavaScript</span></div>
+      </div>
+      <div class="project-card">
+        <div class="project-card-head"><h3>Classic Pong Game</h3><div class="project-links"><a href="https://github.com/Arvind22cse/python-game-development.git"><i class="fab fa-github"></i></a></div></div>
+        <p class="project-desc">Two-player Pong game with paddle controls, collision detection, score tracking, and sound effects. Hands-on experience in event-driven programming and real-time graphics rendering.</p>
+        <div class="tech-stack"><span class="tech-tag">Python</span><span class="tech-tag">Pygame</span></div>
+      </div>
+      <div class="project-card">
+        <div class="project-card-head">
+          <h3>Farm2Home Delivery App (UI/UX)</h3>
+          <div class="project-links"><a href="https://www.figma.com/design/Xmasc5BN2zt5DOJSYw2pQs/Untitled?node-id=0-1&t=dFc6kOFbhfUlI2hf-1" target="_blank"><i class="fa-brands fa-figma"></i></a></div>
+        </div>
+        <p class="project-desc">Complete Figma prototype for Farm2Home grocery delivery app with mobile-first design, grid systems, and clickable user flows.</p>
+        <div class="tech-stack"><span class="tech-tag">Figma</span><span class="tech-tag">UI Design</span><span class="tech-tag">Prototyping</span><span class="tech-tag">Mobile Design</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTERNSHIP -->
+<section id="internship">
+  <div class="section-title-wrap reveal">
+    <div class="section-label">Experience</div>
+    <h2 class="section-title">Internship <span>Experience</span></h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="internship-card reveal">
+    <div class="internship-header">
+      <div>
+        <div class="internship-org">Generative AI Consortium & SystimaNX IT Solutions Pvt. Ltd.</div>
+        <div class="internship-role">Machine Learning Intern — Flight Ticket Price Prediction</div>
+        <div class="internship-meta">
+          <span class="internship-date"><i class="fas fa-calendar"></i> Jul 2024 – Oct 2024</span>
+          <span class="internship-date"><i class="fas fa-wifi"></i> Remote</span>
+        </div>
+      </div>
+      <div class="internship-badge"><i class="fas fa-check-circle"></i> Completed</div>
+    </div>
+    <div class="highlight-box">
+      <div class="highlight-num">97.7%</div>
+      <div class="highlight-text">Prediction accuracy achieved<br>using XGBoost Regressor</div>
+    </div>
+    <ul class="internship-list">
+      <li>Developed and evaluated ML models including <strong>SVR, XGBoost, and Linear Regression</strong> for predicting airline ticket prices.</li>
+      <li>Performed data preprocessing, feature engineering, outlier handling, dimensionality reduction (PCA), and model optimization.</li>
+      <li>Applied performance metrics: <strong>MSE, RMSE, MAE, and R² Score</strong> to compare model performance.</li>
+      <li>Built a <strong>Flask-based web application</strong> with HTML templates for real-time ticket price predictions based on user inputs.</li>
+      <li>Gained hands-on experience in ML pipeline design, feature engineering, model deployment, and API development.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+  <div class="section-title-wrap reveal">
+    <div class="section-label">Recognition</div>
+    <h2 class="section-title">Achievements & <span>Certifications</span></h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="achievements-grid stagger reveal">
+    <div class="achievement-card">
+      <div class="ach-icon">🥈</div>
+      <div>
+        <div class="ach-title">2nd Place — ByteBash HackerRank</div>
+        <div class="ach-sub">Competitive Coding Competition</div>
+      </div>
+    </div>
+    <div class="achievement-card">
+      <div class="ach-icon">🥉</div>
+      <div>
+        <div class="ach-title">3rd Place — Health Rate Monitoring</div>
+        <div class="ach-sub">Paper Presentation Competition</div>
+      </div>
+    </div>
+    <div class="achievement-card">
+      <div class="ach-icon">🎖️</div>
+      <div>
+        <div class="ach-title">NCC A & B Certificates</div>
+        <div class="ach-sub">National Cadet Corps</div>
+      </div>
+    </div>
+    <div class="achievement-card">
+      <div class="ach-icon">📜</div>
+      <div>
+        <div class="ach-title">Wipro Java Full Stack Certification</div>
+        <div class="ach-sub">Industry Certification</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-title-wrap reveal">
+    <div class="section-label">Contact</div>
+    <h2 class="section-title">Get In <span>Touch</span></h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="contact-grid">
+    <div class="reveal-left">
+      <div class="contact-tagline">Let's build something amazing together</div>
+      <p class="contact-sub">I'm currently open to new opportunities. Whether you have a project in mind, a question, or just want to say hi — I'll get back to you as soon as possible.</p>
+      <div class="contact-item">
+        <div class="contact-icon-wrap"><i class="fas fa-envelope"></i></div>
+        <div>
+          <div class="contact-item-label">Email</div>
+          <div class="contact-item-value">arvindmurugesan001@gmail.com</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon-wrap"><i class="fas fa-phone"></i></div>
+        <div>
+          <div class="contact-item-label">Phone</div>
+          <div class="contact-item-value">+91 7010123540</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon-wrap"><i class="fas fa-location-dot"></i></div>
+        <div>
+          <div class="contact-item-label">Location</div>
+          <div class="contact-item-value">Tamil Nadu, India</div>
+        </div>
+      </div>
+      <div class="social-row">
+        <a href="https://github.com/Arvind22cse" class="social-btn" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/arvind-m-a60568259" class="social-btn" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://ieeexplore.ieee.org/document/11436665" class="social-btn" target="_blank"><i class="fas fa-book-open"></i></a>
+      </div>
+    </div>
+    <div class="contact-form-card reveal-right">
+      <div class="form-row">
+        <div class="form-field">
+          <label>Your Name</label>
+          <input type="text" placeholder="John Doe">
+        </div>
+        <div class="form-field">
+          <label>Email Address</label>
+          <input type="email" placeholder="john@example.com">
+        </div>
+      </div>
+      <div class="form-field">
+        <label>Subject</label>
+        <input type="text" placeholder="What's this about?">
+      </div>
+      <div class="form-field">
+        <label>Message</label>
+        <textarea rows="5" placeholder="Tell me about your project or opportunity..."></textarea>
+      </div>
+      <button class="btn-send"><i class="fas fa-paper-plane"></i> Send Message</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Arvind.dev</div>
+  <div class="footer-copy">© 2026 Arvind M · Full Stack Developer · Tamil Nadu, India</div>
+  <div class="footer-links">
+    <a href="#home">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</footer>
+
+<style>
+.cursor-blink {
+  animation: blink 1s infinite;
+  color: var(--accent);
+  font-weight: 300;
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+</style>
+</body>
+ <script src="Script.js"></script>
+</html>
