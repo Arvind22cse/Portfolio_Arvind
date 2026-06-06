@@ -114,3 +114,119 @@ const statObs = new IntersectionObserver(entries=>{
 },{threshold:0.3});
 const statsBar = document.querySelector('.stats-bar');
 if(statsBar) statObs.observe(statsBar);
+
+// Contact form handler (EmailJS integration with mailto fallback)
+// Contact Form EmailJS
+(function () {
+
+  // Replace with your EmailJS Public Key
+  emailjs.init("YP_KcFKfEs8tl__c8");
+
+console.log("EmailJS initialized");
+  const form = document.getElementById("contactForm");
+
+  if (!form) return;
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("nameInput").value.trim();
+    const from_email = document.getElementById("emailInput").value.trim();
+    const subject = document.getElementById("subjectInput").value.trim();
+    const message = document.getElementById("messageInput").value.trim();
+
+    const btn = document.getElementById("sendBtn");
+    const formMsg = document.getElementById("formMessage");
+
+    btn.disabled = true;
+    btn.innerHTML =
+      '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+    const templateParams = {
+      name: name,
+      email: from_email,
+      title: subject,
+      message: message
+    };
+console.log("Service ID:", "service_fdkmt0j");
+console.log("Template ID:", "template_tgxw5go");
+console.log("Params:", templateParams);
+    emailjs
+      .send(
+        "service_fdkmt0j",
+        "template_tgxw5go",
+        templateParams
+      )
+      .then(() => {
+        formMsg.style.display = "block";
+        formMsg.style.color = "#00ff88";
+        formMsg.textContent =
+          "Message sent successfully!";
+
+        form.reset();
+      })
+ .catch((error) => {
+
+  console.log("========== EMAILJS ERROR ==========");
+  console.log("Status:", error.status);
+  console.log("Text:", error.text);
+  console.log("Full Object:", error);
+
+  alert(
+    "Status: " + error.status +
+    "\nText: " + error.text
+  );
+
+  formMsg.style.display = "block";
+  formMsg.style.color = "red";
+  formMsg.textContent =
+    "Status: " + error.status +
+    " | " + error.text;
+})
+      .finally(() => {
+        btn.disabled = false;
+        btn.innerHTML =
+          '<i class="fas fa-paper-plane"></i> Send Message';
+      });
+  });
+
+})();
+
+const slides = document.querySelectorAll('.cert-slide');
+const slider = document.querySelector('.cert-slider');
+
+let currentSlide = 0;
+
+function showSlide(index){
+
+  if(index < 0){
+    currentSlide = slides.length - 1;
+  }
+  else if(index >= slides.length){
+    currentSlide = 0;
+  }
+  else{
+    currentSlide = index;
+  }
+
+  slider.style.transform =
+    `translateX(-${currentSlide * 100}%)`;
+}
+
+document
+.querySelector('.next')
+.addEventListener('click', () => {
+  showSlide(currentSlide + 1);
+});
+
+document
+.querySelector('.prev')
+.addEventListener('click', () => {
+  showSlide(currentSlide - 1);
+});
+
+/* Auto slide */
+
+setInterval(() => {
+  showSlide(currentSlide + 1);
+}, 4000);

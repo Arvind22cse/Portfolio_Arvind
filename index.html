@@ -8,7 +8,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
- <link rel="stylesheet" href="Style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<link rel="stylesheet" href="Style.css">
 
 </head>
 <body>
@@ -27,7 +29,18 @@
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#internship">Internship</a></li>
-    <li><a href="#achievements">Achievements</a></li>
+    <li class="dropdown">
+    <a href="#">
+        More <i class="fas fa-chevron-down"></i>
+    </a>
+
+    <ul class="dropdown-menu">
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#coding">Coding Profiles</a></li>
+        <li><a href="#publication">Publication</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+    </ul>
+</li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="hamburger" id="hamburger">
@@ -36,14 +49,78 @@
 </nav>
 
 <!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu">
-  <span class="close-menu" id="closeMenu"><i class="fas fa-times"></i></span>
-  <a href="#home" onclick="closeMobileMenu()">Home</a>
-  <a href="#about" onclick="closeMobileMenu()">About</a>
-  <a href="#skills" onclick="closeMobileMenu()">Skills</a>
-  <a href="#projects" onclick="closeMobileMenu()">Projects</a>
-  <a href="#achievements" onclick="closeMobileMenu()">Achievements</a>
-  <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+<div id="mobileMenu" class="mobile-menu">
+
+  <button id="closeMenu" class="close-menu">
+    <i class="fas fa-times"></i>
+  </button>
+
+  <div class="mobile-group">
+    <div class="mobile-heading">Navigation</div>
+
+    <a href="#home" onclick="closeMobileMenu()">
+      <i class="fas fa-house"></i>
+      Home
+    </a>
+
+    <a href="#about" onclick="closeMobileMenu()">
+      <i class="fas fa-user"></i>
+      About
+    </a>
+
+    <a href="#skills" onclick="closeMobileMenu()">
+      <i class="fas fa-code"></i>
+      Skills
+    </a>
+
+    <a href="#projects" onclick="closeMobileMenu()">
+      <i class="fas fa-folder-open"></i>
+      Projects
+    </a>
+
+    <a href="#internship" onclick="closeMobileMenu()">
+      <i class="fas fa-briefcase"></i>
+      Internship
+    </a>
+  </div>
+
+  <div class="mobile-divider"></div>
+
+  <div class="mobile-group">
+    <div class="mobile-heading">More</div>
+
+    <a href="#achievements" onclick="closeMobileMenu()">
+      <i class="fas fa-trophy"></i>
+      Achievements
+    </a>
+
+    <a href="#coding" onclick="closeMobileMenu()">
+      <i class="fas fa-laptop-code"></i>
+      Coding Profiles
+    </a>
+
+    <a href="#publication" onclick="closeMobileMenu()">
+      <i class="fas fa-book"></i>
+      Publication
+    </a>
+
+    <a href="#certifications" onclick="closeMobileMenu()">
+      <i class="fas fa-certificate"></i>
+      Certifications
+    </a>
+  </div>
+
+  <div class="mobile-divider"></div>
+
+  <div class="mobile-group">
+    <div class="mobile-heading">Connect</div>
+
+    <a href="#contact" onclick="closeMobileMenu()">
+      <i class="fas fa-envelope"></i>
+      Contact
+    </a>
+  </div>
+
 </div>
 
 <!-- HERO -->
@@ -59,17 +136,31 @@
         <span class="hero-typing">I build <span class="typed" id="typed"></span><span class="cursor-blink">|</span></span>
       </div>
       <p class="hero-desc">
-        Aspiring Full Stack Developer passionate about building scalable web and mobile applications using MERN Stack, Spring Boot, Flutter and modern software engineering practices.
+Full Stack Developer skilled in MERN Stack, Spring Boot, Flutter and Machine Learning. Built 11+ projects including scalable web applications, mobile apps, and AI-driven solutions.
       </p>
       <div class="hero-cta">
         <a href="https://drive.google.com/file/d/1f-DEdznvuj7_rn6rdJGtMAapeaDi_gYV/view?usp=sharing" class="btn btn-primary"><i class="fas fa-download"></i> Download Resume</a>
         <a href="#projects" class="btn btn-outline"><i class="fas fa-code"></i> View Projects</a>
+      <a href="https://www.linkedin.com/in/arvind-m-a60568259/" class="btn btn-outline"  class="btn btn-primary">
+        <i class="fab fa-linkedin"></i> LinkedIn</a>
       </div>
+      
+
     </div>
     <div class="hero-visual">
       <div class="hero-card">
        
-          <img src="profile.jpeg" alt="Arvind M" style="width:40%;height:40%;object-fit:cover;border-radius:16px;">
+         <img
+ src="profile.jpeg"
+ alt="Arvind M"
+ style="
+ width:140px;
+ height:140px;
+ object-fit:cover;
+ border-radius:50%;
+ border:3px solid #38bdf8;
+ "
+>
         
         <div class="hc-name">Arvind M</div>
         <div class="hc-role">Full Stack Developer</div>
@@ -175,52 +266,195 @@
 </section>
 
 <!-- SKILLS -->
+<!-- SKILLS -->
 <section id="skills">
   <div class="section-title-wrap reveal">
     <div class="section-label">Skills</div>
     <h2 class="section-title">Tech <span>Stack</span></h2>
     <div class="section-line"></div>
   </div>
+
   <div class="skills-container">
+
+    <!-- Languages -->
     <div class="reveal">
       <div class="skill-category-title">Languages</div>
       <div class="skills-grid stagger">
-        <div class="skill-pill"><span class="skill-icon">☕</span> Java</div>
-        <div class="skill-pill"><span class="skill-icon">⚙️</span> C</div>
-        <div class="skill-pill"><span class="skill-icon">🟨</span> JavaScript</div>
-        <div class="skill-pill"><span class="skill-icon">🐍</span> Python</div>
+        <div class="skill-pill">
+          <span class="skill-icon"><i class="devicon-java-plain colored"></i></span>
+          Java
+        </div>
+
+        <div class="skill-pill">
+          <span class="skill-icon"><i class="devicon-c-plain colored"></i></span>
+          C
+        </div>
+
+
+        <div class="skill-pill">
+          <span class="skill-icon"><i class="devicon-python-plain colored"></i></span>
+          Python
+        </div>
       </div>
     </div>
+
+    <!-- Frontend & Mobile -->
     <div class="reveal">
       <div class="skill-category-title">Frontend & Mobile</div>
       <div class="skills-grid stagger">
-        <div class="skill-pill"><span class="skill-icon">⚛️</span> React.js</div>
-        <div class="skill-pill"><span class="skill-icon">💙</span> Flutter</div>
-        <div class="skill-pill"><span class="skill-icon">🎨</span> HTML / CSS</div>
-        <div class="skill-pill"><span class="skill-icon">🖼️</span> Figma</div>
+
+        <div class="skill-pill">
+          <span class="skill-icon"><i class="devicon-react-original colored"></i></span>
+          React.js
+        </div>
+        <div class="skill-pill">
+          <span class="skill-icon"><i class="devicon-html5-plain colored"></i></span>
+          HTML5
+        </div>
+
+        <div class="skill-pill">
+          <span class="skill-icon"><i class="devicon-css3-plain colored"></i></span>
+          CSS3
+        </div>
+        <div class="skill-pill">
+          <span class="skill-icon"><i class="devicon-javascript-plain colored"></i></span>
+          JavaScript
+        </div>
+
+        <div class="skill-pill">
+          <span class="skill-icon"><i class="devicon-flutter-plain colored"></i></span>
+          Flutter
+        </div>
+
+        <div class="skill-pill">
+          <span class="skill-icon"><i class="devicon-figma-plain colored"></i></span>
+          Figma
+        </div>
+
       </div>
     </div>
+
+    <!-- Backend & Databases -->
     <div class="reveal">
       <div class="skill-category-title">Backend & Databases</div>
       <div class="skills-grid stagger">
-        <div class="skill-pill"><span class="skill-icon">🟢</span> Node.js</div>
-        <div class="skill-pill"><span class="skill-icon">🚂</span> Express.js</div>
-        <div class="skill-pill"><span class="skill-icon">🍃</span> Spring Boot</div>
-        <div class="skill-pill"><span class="skill-icon">🍃</span> MongoDB</div>
-        <div class="skill-pill"><span class="skill-icon">🐬</span> MySQL</div>
-        <div class="skill-pill"><span class="skill-icon">🐍</span> Flask</div>
+
+        <div class="skill-pill">
+          <span class="skill-icon"><i class="devicon-nodejs-plain colored"></i></span>
+          Node.js
+        </div>
+
+        <div class="skill-pill">
+          <span class="skill-icon"><i class="devicon-express-original"></i></span>
+          Express.js
+        </div>
+
+        <div class="skill-pill">
+          <span class="skill-icon"><i class="devicon-spring-original colored"></i></span>
+          Spring Boot
+        </div>
+
+        <div class="skill-pill">
+          <span class="skill-icon"><i class="devicon-mongodb-plain colored"></i></span>
+          MongoDB
+        </div>
+
+        <div class="skill-pill">
+          <span class="skill-icon"><i class="devicon-mysql-plain colored"></i></span>
+          MySQL
+        </div>
+
       </div>
     </div>
+
+    <!-- Tools & Others -->
     <div class="reveal">
       <div class="skill-category-title">Tools & Others</div>
       <div class="skills-grid stagger">
-        <div class="skill-pill"><span class="skill-icon">🐙</span> Git</div>
-        <div class="skill-pill"><span class="skill-icon">📮</span> Postman</div>
-        <div class="skill-pill"><span class="skill-icon">🤖</span> OpenCV</div>
-        <div class="skill-pill"><span class="skill-icon">🧠</span> DistilBERT / RoBERTa</div>
-        <div class="skill-pill"><span class="skill-icon">📊</span> XGBoost</div>
+
+        <div class="skill-pill">
+          <span class="skill-icon"><i class="devicon-git-plain colored"></i></span>
+          Git
+        </div>
+
+        <div class="skill-pill">
+          <span class="skill-icon"><i class="devicon-postman-plain colored"></i></span>
+          Postman
+        </div>
+
+        <div class="skill-pill">
+          <span class="skill-icon"><i class="devicon-github-original"></i></span>
+          GitHub
+        </div>
+        <div class="skill-pill">
+  <span class="skill-icon">
+    <i class="devicon-vscode-plain colored"></i>
+  </span>
+  VS Code
+</div>
+
+<div class="skill-pill">
+  <span class="skill-icon">
+    <i class="devicon-intellij-plain colored"></i>
+  </span>
+  IntelliJ IDEA
+</div>
+<div class="skill-pill">
+  <span class="skill-icon">
+    <img src="https://colab.research.google.com/img/colab_favicon_256px.png"
+         alt="Google Colab"
+         style="width:20px;height:20px;">
+  </span>
+  Google Colab
+</div>
+
       </div>
     </div>
+
+  <!-- Core Concepts -->
+<div class="reveal">
+    <div class="skill-category-title">Core Concepts</div>
+
+    <div class="skills-grid stagger">
+
+        <div class="skill-pill">
+            <span class="skill-icon">
+                <i class="fas fa-brain" style="color:#FF6B35;"></i>
+            </span>
+            Machine Learning
+        </div>
+
+        <div class="skill-pill">
+            <span class="skill-icon">
+                <i class="fas fa-database" style="color:#4CAF50;"></i>
+            </span>
+            Database Management Systems
+        </div>
+
+        <div class="skill-pill">
+            <span class="skill-icon">
+                <i class="fas fa-cube" style="color:#2196F3;"></i>
+            </span>
+            Object-Oriented Programming
+        </div>
+
+        <div class="skill-pill">
+            <span class="skill-icon">
+                <i class="fas fa-code-branch" style="color:#9C27B0;"></i>
+            </span>
+            Data Structures & Algorithms
+        </div>
+
+        <div class="skill-pill">
+            <span class="skill-icon">
+                <i class="fas fa-server" style="color:#00BCD4;"></i>
+            </span>
+            REST APIs
+        </div>
+
+
+    </div>
+</div>
   </div>
 </section>
 
@@ -429,39 +663,359 @@
   </div>
 </section>
 
+<section id="publication" class="section">
+
+  <div class="section-title-wrap reveal">
+    <div class="section-label">Research</div>
+    <h2 class="section-title">IEEE <span>Publication</span></h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="reveal">
+    <div class="research-card">
+
+      <div class="research-badge">
+        <i class="fas fa-award"></i>
+        IEEE Xplore Published Research Paper
+      </div>
+
+      <div class="research-title">
+        Contextual Cyberbullying Detection Using Emotion Enhanced Bystander Modeling
+      </div>
+
+      <p class="research-desc">
+        Published an IEEE research paper proposing a deep learning framework for
+        cyberbullying detection on social networking platforms. The model combines
+        contextual understanding, emotional signals, and bystander behavior analysis
+        to identify subtle harmful online interactions. The proposed DistilBERT +
+        BiLSTM architecture outperformed all baseline models and achieved state-of-the-art
+        performance.
+      </p>
+
+      <div class="research-metrics">
+
+        <div class="metric">
+          <span class="metric-val">97.1%</span>
+          <span class="metric-lbl">Accuracy</span>
+        </div>
+
+        <div class="metric">
+          <span class="metric-val">97.3%</span>
+          <span class="metric-lbl">F1 Score</span>
+        </div>
+
+        <div class="metric">
+          <span class="metric-val">IEEE</span>
+          <span class="metric-lbl">Published</span>
+        </div>
+
+      </div>
+
+      <div class="tech-stack" style="margin-bottom:24px">
+
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">NLP</span>
+        <span class="tech-tag">DistilBERT</span>
+        <span class="tech-tag">RoBERTa</span>
+        <span class="tech-tag">LSTM</span>
+        <span class="tech-tag">BiLSTM</span>
+        <span class="tech-tag">Deep Learning</span>
+
+      </div>
+
+      <a href="https://ieeexplore.ieee.org/document/11436665"
+         target="_blank"
+         class="research-link">
+
+        <i class="fas fa-book-open"></i>
+        View IEEE Publication
+
+      </a>
+
+    </div>
+  </div>
+
+</section>
+
 <!-- INTERNSHIP -->
-<section id="internship">
+<section id="internship" class="section">
+
   <div class="section-title-wrap reveal">
     <div class="section-label">Experience</div>
     <h2 class="section-title">Internship <span>Experience</span></h2>
     <div class="section-line"></div>
   </div>
+
   <div class="internship-card reveal">
+
     <div class="internship-header">
+
       <div>
-        <div class="internship-org">Generative AI Consortium & SystimaNX IT Solutions Pvt. Ltd.</div>
-        <div class="internship-role">Machine Learning Intern — Flight Ticket Price Prediction</div>
-        <div class="internship-meta">
-          <span class="internship-date"><i class="fas fa-calendar"></i> Jul 2024 – Oct 2024</span>
-          <span class="internship-date"><i class="fas fa-wifi"></i> Remote</span>
+        <h3 class="internship-role">
+          Machine Learning Intern
+        </h3>
+
+        <div class="internship-company">
+          <i class="fas fa-building"></i>
+          Generative AI Consortium & SystimaNX IT Solutions
+Pvt. Ltd
         </div>
       </div>
-      <div class="internship-badge"><i class="fas fa-check-circle"></i> Completed</div>
-    </div>
-    <div class="highlight-box">
-      <div class="highlight-num">97.7%</div>
-      <div class="highlight-text">Prediction accuracy achieved<br>using XGBoost Regressor</div>
-    </div>
-    <ul class="internship-list">
-      <li>Developed and evaluated ML models including <strong>SVR, XGBoost, and Linear Regression</strong> for predicting airline ticket prices.</li>
-      <li>Performed data preprocessing, feature engineering, outlier handling, dimensionality reduction (PCA), and model optimization.</li>
-      <li>Applied performance metrics: <strong>MSE, RMSE, MAE, and R² Score</strong> to compare model performance.</li>
-      <li>Built a <strong>Flask-based web application</strong> with HTML templates for real-time ticket price predictions based on user inputs.</li>
-      <li>Gained hands-on experience in ML pipeline design, feature engineering, model deployment, and API development.</li>
-    </ul>
-  </div>
-</section>
 
+      <div class="internship-duration">
+        <i class="fas fa-calendar-alt"></i>
+        Jan 2025 – Mar 2025
+      </div>
+
+    </div>
+
+    <p class="internship-summary">
+      Worked on developing a Flight Ticket Price Prediction System
+      using Machine Learning and Flask. Gained hands-on experience
+      in data preprocessing, feature engineering, model building,
+      deployment and API development.
+    </p>
+
+    <div class="internship-highlights">
+
+      <div class="highlight-item">
+        <i class="fas fa-check-circle"></i>
+        Built Flight Ticket Price Prediction System
+      </div>
+
+      <div class="highlight-item">
+        <i class="fas fa-check-circle"></i>
+        Developed Flask-Based Web Application
+      </div>
+
+      <div class="highlight-item">
+        <i class="fas fa-check-circle"></i>
+        Applied Feature Engineering & Data Cleaning
+      </div>
+
+      <div class="highlight-item">
+        <i class="fas fa-check-circle"></i>
+        Evaluated Models using MSE, RMSE, MAE & R² Score
+      </div>
+
+    </div>
+
+    <div class="tech-stack">
+
+      <span class="tech-tag">Python</span>
+      <span class="tech-tag">Flask</span>
+      <span class="tech-tag">Machine Learning</span>
+      <span class="tech-tag">Pandas</span>
+      <span class="tech-tag">NumPy</span>
+      <span class="tech-tag">Scikit-Learn</span>
+      <span class="tech-tag">XGBoost</span>
+
+    </div>
+
+    <!-- Certificate -->
+
+    <div class="internship-certificate">
+
+
+     <div class="cert-content">
+
+  <h4>Internship Completion Certificate</h4>
+
+  <p>
+    Successfully completed Machine Learning Internship
+    at Unified Mentor Pvt Ltd.
+  </p>
+
+  <div class="internship-actions">
+
+    <a
+      href="certificates/internship-certificate.jpg"
+      target="_blank"
+      class="view-cert-btn"
+    >
+      <i class="fas fa-certificate"></i>
+      View Certificate
+    </a>
+
+    <a
+      href="https://github.com/Arvind22cse/ML_INTERNSHIP.git"
+      target="_blank"
+      class="github-btn"
+    >
+      <i class="fab fa-github"></i>
+      GitHub Repo
+    </a>
+
+  </div>
+
+</div>
+
+    </div>
+
+  </div>
+<div class="availability-banner">
+  <i class="fas fa-briefcase"></i>
+  Actively Seeking Software Developer, Java Full Stack and MERN Stack Opportunities
+</div>
+</section>
+<!-- CODING PROFILES -->
+<section id="coding">
+  <div class="section-title-wrap reveal">
+    <div class="section-label">Profiles</div>
+    <h2 class="section-title">Coding <span>Profiles</span></h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="coding-grid reveal">
+
+    <!-- LeetCode -->
+    <a href="https://leetcode.com/u/CSE_22CSR023/"
+       target="_blank"
+       class="coding-card">
+      <div class="coding-icon">
+        <i class="fas fa-code"></i>
+      </div>
+
+      <div class="coding-info">
+        <h3>LeetCode</h3>
+        <p>DSA & Problem Solving</p>
+      </div>
+
+      <i class="fas fa-arrow-up-right-from-square"></i>
+    </a>
+
+    <!-- GitHub -->
+    <a href="https://github.com/Arvind22cse"
+       target="_blank"
+       class="coding-card">
+      <div class="coding-icon">
+        <i class="fab fa-github"></i>
+      </div>
+
+      <div class="coding-info">
+        <h3>GitHub</h3>
+        <p>Projects & Source Code</p>
+      </div>
+
+      <i class="fas fa-arrow-up-right-from-square"></i>
+    </a>
+
+    <!-- HackerRank -->
+    <a href="https://www.hackerrank.com/profile/22CSR023_ARVI"
+       target="_blank"
+       class="coding-card">
+      <div class="coding-icon">
+        <i class="fab fa-hackerrank"></i>
+      </div>
+
+      <div class="coding-info">
+        <h3>HackerRank</h3>
+        <p>Programming Certifications</p>
+      </div>
+
+      <i class="fas fa-arrow-up-right-from-square"></i>
+    </a>
+
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/in/arvind-m-a60568259/"
+       target="_blank"
+       class="coding-card">
+      <div class="coding-icon">
+        <i class="fab fa-linkedin"></i>
+      </div>
+
+      <div class="coding-info">
+        <h3>LinkedIn</h3>
+        <p>Professional Profile</p>
+      </div>
+
+      <i class="fas fa-arrow-up-right-from-square"></i>
+    </a>
+
+  </div>
+
+  
+</section>
+<section id="certifications" class="section">
+
+  <div class="section-title-wrap reveal">
+    <div class="section-label">Learning</div>
+    <h2 class="section-title">My <span>Certifications</span></h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="cert-slider-container reveal">
+
+    <button class="cert-btn prev">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <div class="cert-slider">
+
+      <div class="cert-slide active">
+        <img
+    src="certificates/Wipro.jpg"
+    alt=""
+    class="portrait-cert"
+  >
+
+  <div class="cert-info">
+    <h3>Java Full Stack</h3>
+    <span>Wipro TalentNext</span>
+  </div>
+
+</div>
+      <div class="cert-slide">
+        <img src="certificates/code_galatta.jpg" alt="">
+        <div class="cert-info">
+          <h3>C, C++, Python Data Science & Java</h3>
+          <span>Code Galatta</span>
+        </div>
+      </div>
+
+      <div class="cert-slide">
+        <img src="certificates/infosys.jpg" alt="">
+        <div class="cert-info">
+          <h3>Java Programming Fundamentals</h3>
+          <span>Infosys Springboard</span>
+        </div>
+      </div>
+
+      
+
+      <div class="cert-slide">
+        <img src="certificates/HR_Java.jpg" alt="">
+        <div class="cert-info">
+          <h3>Java Basic</h3>
+          <span>HackerRank</span>
+        </div>
+      </div>
+
+      <div class="cert-slide">
+        <img src="certificates/HR_SQL_INTER.jpg" alt="">
+        <div class="cert-info">
+          <h3>SQL Intermediate</h3>
+          <span>HackerRank</span>
+        </div>
+      </div>
+
+       <div class="cert-slide">
+        <img src="certificates/sql_basic_Hr.jpg" alt="">
+        <div class="cert-info">
+          <h3>SQL Basic</h3>
+          <span>HackerRank</span>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="cert-btn next">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+
+  </div>
+
+</section>
 <!-- ACHIEVEMENTS -->
 <section id="achievements">
   <div class="section-title-wrap reveal">
@@ -540,25 +1094,28 @@
       </div>
     </div>
     <div class="contact-form-card reveal-right">
-      <div class="form-row">
-        <div class="form-field">
-          <label>Your Name</label>
-          <input type="text" placeholder="John Doe">
+      <form id="contactForm">
+        <div class="form-row">
+          <div class="form-field">
+            <label>Your Name</label>
+            <input id="nameInput" type="text" placeholder="John Doe" required>
+          </div>
+          <div class="form-field">
+            <label>Email Address</label>
+            <input id="emailInput" type="email" placeholder="john@example.com" required>
+          </div>
         </div>
         <div class="form-field">
-          <label>Email Address</label>
-          <input type="email" placeholder="john@example.com">
+          <label>Subject</label>
+          <input id="subjectInput" type="text" placeholder="What's this about?" required>
         </div>
-      </div>
-      <div class="form-field">
-        <label>Subject</label>
-        <input type="text" placeholder="What's this about?">
-      </div>
-      <div class="form-field">
-        <label>Message</label>
-        <textarea rows="5" placeholder="Tell me about your project or opportunity..."></textarea>
-      </div>
-      <button class="btn-send"><i class="fas fa-paper-plane"></i> Send Message</button>
+        <div class="form-field">
+          <label>Message</label>
+          <textarea id="messageInput" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+        </div>
+        <div id="formMessage" style="margin-bottom:12px;color:var(--accent);display:none;"></div>
+        <button id="sendBtn" type="submit" class="btn-send"><i class="fas fa-paper-plane"></i> Send Message</button>
+      </form>
     </div>
   </div>
 </section>
